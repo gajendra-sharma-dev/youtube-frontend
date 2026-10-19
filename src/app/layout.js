@@ -3,6 +3,7 @@ import "./globals.css";
 import { UserProvider } from "@/context/AuthProvider";
 import { Toaster } from "react-hot-toast";
 import Navbar from "@/components/Navbar";
+import VideoCard from "@/components/VideoCard";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -27,6 +28,8 @@ export default function RootLayout({ children }) {
       <UserProvider>
         <body className="min-h-full flex flex-col">
           {children} <Toaster position="top-center" />
+          <Navbar />
+          <VideoCard />
         </body>
       </UserProvider>
     </html>
